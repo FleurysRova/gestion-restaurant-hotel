@@ -1,0 +1,105 @@
+/* Reset basique */
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 50px rgba(102, 126, 234, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.login-wrapper:hover {
+  box-shadow: 0 30px 60px rgba(102, 126, 234, 0.6);
+}
+
+.login-form h1 {
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+  text-align: center;
+  font-weight: 700;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #6b6b6b;
+  font-weight: 600;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.25s ease;
+  outline-offset: 2px;
+}
+
+.login-form input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.6);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.login-form button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #5a6ad1 0%, #6c3f9a 100%);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.5);
+}
+
+.login-form button:disabled {
+  background: #a0a0a0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.error-msg {
+  margin-top: 1rem;
+  color: #e74c3c;
+  font-weight: 600;
+  text-align: center;
+}
+
+.success-msg {
+  margin-top: 1rem;
+  color: #27ae60;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Responsive simple */
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
